@@ -1,0 +1,64 @@
+
+---
+title: "Network Meta-Analysis Using Summary Log(HR) Data"
+author: "Yolande Tra"
+date: '`r format(Sys.Date(), "%B %d, %Y")`'
+output:
+  html_document:
+    toc: true
+    toc_depth: 2
+    number_sections: true
+    fig_caption: true
+    highlight: tango
+    theme: readable
+    df_print: paged
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Introduction
+
+This R Markdown demonstrates how to perform a network meta-analysis using study-level summary statistics (log hazard ratios and standard errors).
+
+## Load Required Libraries
+
+```{r libraries}
+library(netmeta)
+```
+
+## Read Summary Data
+
+```{r read-summary}
+nma_data <- read.csv("C:/Users/trani/OneDrive/heor-survival-nma/data/nma_summary_loghr_data.csv")
+print(nma_data)
+```
+
+## Perform Network Meta-Analysis
+
+```{r netmeta-analysis}
+net <- netmeta(TE = nma_data$logHR,
+               seTE = nma_data$SE,
+               treat1 = nma_data$treat1,
+               treat2 = nma_data$treat2,
+               studlab = nma_data$study_id,
+               sm = "HR",
+               common = TRUE,
+               random = TRUE)
+summary(net)
+```
+
+## Plot the Treatment Network and Forest Plot
+
+```{r plot-network}
+netgraph(net, thickness = "se.random", multiarm = TRUE)
+```
+
+```{r forest-plot}
+forest(net, ref = "A")
+```
+
+## Conclusion
+
+This workflow demonstrates a simplified example of survival-based network meta-analysis using log(HR) and standard errors from Cox models across studies.
