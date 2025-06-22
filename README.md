@@ -1,3 +1,4 @@
+[![Report](https://img.shields.io/badge/View_Report-HTML-green)](https://liatmarc.github.io/heor-survival-nma/survival_nma_summary_loghr.html)
 
 # Survival and Network Meta-Analysis Example
 
@@ -25,9 +26,9 @@ install.packages(c("survival", "netmeta", "dplyr", "tidyr", "ggplot2"))
 3. Use `scripts/survival_network_meta_analysis.R` for standalone execution.
 
 ## 📘 Learn More
-- [Methods Overview](./Methods_Overview.md)
 
 - 📄 [HTML Report: Network Meta-Analysis Summary](https://liatmarc.github.io/heor-survival-nma/survival_nma_summary_loghr.html)
+- 📄 [Methods Overview](./Methods_Overview.md)
 
 ## Author
 
