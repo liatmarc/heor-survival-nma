@@ -35,7 +35,7 @@ library(ggplot2)
 ## Read the Simulated Dataset
 
 ```{r read-data}
-data <- read.csv("simulated_survival_data.csv")
+data <- read.csv("simulated_multiarm_survival_data.csv")
 head(data)
 ```
 
