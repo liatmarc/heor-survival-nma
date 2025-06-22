@@ -27,6 +27,8 @@ install.packages(c("survival", "netmeta", "dplyr", "tidyr", "ggplot2"))
 ## 📘 Learn More
 - [Methods Overview](./Methods_Overview.md)
 
+- 📄 [HTML Report: Network Meta-Analysis Summary](https://liatmarc.github.io/heor-survival-nma/survival_nma_summary_loghr.html)
+
 ## Author
 
 Developed by [liatmarc](https://github.com/liatmarc) for HEOR learning and skill development.
