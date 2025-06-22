@@ -24,6 +24,9 @@ install.packages(c("survival", "netmeta", "dplyr", "tidyr", "ggplot2"))
 2. Knit to HTML or run interactively.
 3. Use `scripts/survival_network_meta_analysis.R` for standalone execution.
 
+## 📘 Learn More
+- [Methods Overview](./Methods_Overview.md)
+
 ## Author
 
 Developed by [liatmarc](https://github.com/liatmarc) for HEOR learning and skill development.
